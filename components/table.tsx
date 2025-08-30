@@ -12,7 +12,7 @@ const Table = () => {
   const [board, setBoard] = useState(Array(9).fill(""));
   const [open, setOpen] = useState(false);
 
-  let winConditions = [
+  const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -112,7 +112,9 @@ const Table = () => {
           ))}
         </div>
         <div>
-          <h2 className="text-2xl text-center m-5">Player {turn}'s Turn</h2>
+          <h2 className="text-2xl text-center m-5">
+            Player {turn}&apos;s Turn
+          </h2>
           <Button variant="ghost" onClick={resetBoard}>
             Reset Board
           </Button>
